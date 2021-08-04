@@ -1,0 +1,910 @@
+{
+  "id" : 1,
+  "name" : "Big Bank plc",
+  "description" : "This is an example workspace to illustrate the key features of Structurizr, via the DSL, based around a fictional online banking system.",
+  "revision" : 0,
+  "lastModifiedDate" : "2021-08-03T06:30:22Z",
+  "lastModifiedAgent" : "structurizr-web/2457",
+  "properties" : {
+    "structurizr.dsl" : "CndvcmtzcGFjZSAiQmlnIEJhbmsgcGxjIiAiVGhpcyBpcyBhbiBleGFtcGxlIHdvcmtzcGFjZSB0byBpbGx1c3RyYXRlIHRoZSBrZXkgZmVhdHVyZXMgb2YgU3RydWN0dXJpenIsIHZpYSB0aGUgRFNMLCBiYXNlZCBhcm91bmQgYSBmaWN0aW9uYWwgb25saW5lIGJhbmtpbmcgc3lzdGVtLiIgewoKICAgIG1vZGVsIHsKICAgICAgIAoKICAgICAgICAgICAgZW50ZXJwcmlzZSAiU21hcnQgRW50ZXJwcmlzZSBQdHkgTHRkIiB7CiAgICAgICAgICAgICAgICBEYXRhRW5naW5lZXIgPSBwZXJzb24gIkRhdGEgRW5naW5lZXIiICIuLi4iICJEYXRhRW5naW5lZXIiCiAgICAgICAgICAgICAgICBJbmZvcm1hdGlvbkNvbnN1bWVyID0gcGVyc29uICJEYXRhIC8gUmVwb3J0IENvbnN1bWVyIiAiIiAiIgogICAgICAgICAgICAgICAgSW5mb3JtYXRpb25Xb3JrZXIgPSBwZXJzb24gIkluZm9ybWF0aW9uIFdvcmtlciIgIiIgIiIKICAgICAgICAgICAgICAgIERhdGFTdGV3YXJkcyA9IHBlcnNvbiAiRGF0YSBTdGV3YXJkcyIgIiIgIiIKICAgICAgICAgICAgICAgIFNlY3VyaXR5T2ZmaWNlciA9IHBlcnNvbiAiU2VjdXJpdHkgQWRtaW4iICIiICIiCiAgICAgICAgICAgICAgICBDSVNPID0gcGVyc29uICJDaGllZiBJbmZvcm1hdGlvbiBTZWN1cml0eSBPZmZpY2VyIiAiIiAiIgogICAgICAgICAgICAgICAgQ0RPID0gcGVyc29uICJDaGllZiBEYXRhIE9mZmljZXIiICIiICIiCiAgICAgICAgICAgICAgICAKICAgICAgICAKICAgICAgICAgICAgICAgIGdyb3VwICJBenVyZSIgewogICAgICAgICAgICAgICAgICAgIG1haW5mcmFtZSA9IHNvZnR3YXJlc3lzdGVtICJNYWluZnJhbWUgQmFua2luZyBTeXN0ZW0iICJTdG9yZXMgYWxsIG9mIHRoZSBjb3JlIGJhbmtpbmcgaW5mb3JtYXRpb24gYWJvdXQgRGF0YUVuZ2luZWVycywgYWNjb3VudHMsIHRyYW5zYWN0aW9ucywgZXRjLiIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICAgICAgICAgICAgICBlbWFpbCA9IHNvZnR3YXJlc3lzdGVtICJFLW1haWwgU3lzdGVtIiAiVGhlIGludGVybmFsIE1pY3Jvc29mdCBFeGNoYW5nZSBlLW1haWwgc3lzdGVtLiIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICAgICAgICAgICAgICBhdG0gPSBzb2Z0d2FyZXN5c3RlbSAiQVRNIiAiQWxsb3dzIERhdGFFbmdpbmVlcnMgdG8gd2l0aGRyYXcgY2FzaC4iICJFeGlzdGluZyBTeXN0ZW0iCgogICAgICAgICAgICAgICAgICAgIEFkc0dvRmFzdENvcmUgPSBzb2Z0d2FyZXN5c3RlbSAiQURTIEdvIEZhc3QgQ29yZSIgIi4uLiIgewogICAgICAgICAgICAgICAgICAgICAgICB3ZWJBcHBsaWNhdGlvbiA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiLi4uIiAiLk5ldCBDb3JlIE1WQyIKICAgICAgICAgICAgICAgICAgICAgICAgYXBpQXBwbGljYXRpb24gPSBjb250YWluZXIgIkFQSSBBcHBsaWNhdGlvbiIgIkFkcyBHbyBGYXN0IE9yY2hlc3RyYXRpb24gRnVuY3Rpb24gQXBwIiAiLk5ldCBDb3JlIiB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzaWduaW5Db250cm9sbGVyID0gY29tcG9uZW50ICJTaWduIEluIENvbnRyb2xsZXIiICJBbGxvd3MgdXNlcnMgdG8gc2lnbiBpbiB0byB0aGUgSW50ZXJuZXQgQmFua2luZyBTeXN0ZW0uIiAiU3ByaW5nIE1WQyBSZXN0IENvbnRyb2xsZXIiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBhY2NvdW50c1N1bW1hcnlDb250cm9sbGVyID0gY29tcG9uZW50ICJBY2NvdW50cyBTdW1tYXJ5IENvbnRyb2xsZXIiICJQcm92aWRlcyBEYXRhRW5naW5lZXJzIHdpdGggYSBzdW1tYXJ5IG9mIHRoZWlyIGJhbmsgYWNjb3VudHMuIiAiU3ByaW5nIE1WQyBSZXN0IENvbnRyb2xsZXIiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXNldFBhc3N3b3JkQ29udHJvbGxlciA9IGNvbXBvbmVudCAiUmVzZXQgUGFzc3dvcmQgQ29udHJvbGxlciIgIkFsbG93cyB1c2VycyB0byByZXNldCB0aGVpciBwYXNzd29yZHMgd2l0aCBhIHNpbmdsZSB1c2UgVVJMLiIgIlNwcmluZyBNVkMgUmVzdCBDb250cm9sbGVyIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VjdXJpdHlDb21wb25lbnQgPSBjb21wb25lbnQgIlNlY3VyaXR5IENvbXBvbmVudCIgIlByb3ZpZGVzIGZ1bmN0aW9uYWxpdHkgcmVsYXRlZCB0byBzaWduaW5nIGluLCBjaGFuZ2luZyBwYXNzd29yZHMsIGV0Yy4iICJTcHJpbmcgQmVhbiIKICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1haW5mcmFtZUJhbmtpbmdTeXN0ZW1GYWNhZGUgPSBjb21wb25lbnQgIk1haW5mcmFtZSBCYW5raW5nIFN5c3RlbSBGYWNhZGUiICJBIGZhY2FkZSBvbnRvIHRoZSBtYWluZnJhbWUgYmFua2luZyBzeXN0ZW0uIiAiU3ByaW5nIEJlYW4iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbWFpbENvbXBvbmVudCA9IGNvbXBvbmVudCAiRS1tYWlsIENvbXBvbmVudCIgIlNlbmRzIGUtbWFpbHMgdG8gdXNlcnMuIiAiU3ByaW5nIEJlYW4iCiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgZGF0YWJhc2UgPSBjb250YWluZXIgIkFEUyBHbyBGYXN0IE1ldGFkYXRhIERCIiAiU3RvcmVzIHRhc2sgbWV0YWRhdGEgYW5kIHNldHRpbmdzIGZvciB0aGUgQURTIEdvIEZhc3QgRnJhbWV3b3JrIiAiQURTIEdvIEZhc3QgTWV0YWRhdGEgREIiICJNaWNyb3NvZnQgQXp1cmUgLSBTUUwgRGF0YWJhc2UsIERhdGFiYXNlIgogICAgICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICAgICAgQWRzR29GYXN0RXhlY3V0aW9uRW5naW5lcyA9IHNvZnR3YXJlc3lzdGVtICJUYXNrIEV4ZWN1dGlvbiBFbmdpbmVzICIgIi4uLiIgewogICAgICAgICAgICAgICAgICAgICAgICBhZGYgPSBjb250YWluZXIgIkF6dXJlIERhdGEgRmFjdG9yeSIgIi4uLiIgIi4uLi4iCiAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICBSZXBvcnRpbmdFbmdpbmVzID0gc29mdHdhcmVzeXN0ZW0gIlJlcG9ydGluZyAmIEFuYWx5dGljcyBTZXJ2aWNlcyIgIi4uLiIgewogICAgICAgICAgICAgICAgICAgICAgICBwYmkgPSBjb250YWluZXIgIlBvd2VyIEJpIiAiLi4uIiAiLi4uLiIKICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgIERhdGFMYWtlID0gc29mdHdhcmVzeXN0ZW0gIkRhdGFMYWtlIiAiLi4uIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGFkbHNMYW5kaW5nID0gY29udGFpbmVyICJBRExTIC0gTGFuZGluZyIgIi4uLiIgIi4uLi4iCiAgICAgICAgICAgICAgICAgICAgICAgIGFkbHNCcm9uemUgPSBjb250YWluZXIgIkFETFMgLSBCcm9uemUiICIuLi4iICIuLi4uIgogICAgICAgICAgICAgICAgICAgICAgICBhZGxzU2lsdmVyID0gY29udGFpbmVyICJBRExTIC0gU2lsdmVyIiAiLi4uIiAiLi4uLiIKICAgICAgICAgICAgICAgICAgICAgICAgYWRsc0dvbGQgPSBjb250YWluZXIgIkFETFMgLSBHb2xkIiAiLi4uIiAiLi4uLiIKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgZ3JvdXAgIk1pY3Jvc29mdCBQb3dlciBQbGF0Zm9ybSIgewogICAgICAgICAgICAgICAgICAgIFBvd2VyQkkgPSBzb2Z0d2FyZXN5c3RlbSAiUG93ZXJCaSIgIi4uLi4iCiAgICAgICAgICAgICAgICAgICAgUG93ZXJBcHBzID0gc29mdHdhcmVzeXN0ZW0gIlBvd2VyIEFwcHMiICIuLi4uIiAKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGdyb3VwICJNaWNyb3NvZnQgT2ZmaWNlIDM2NSIgewogICAgICAgICAgICAgICAgICAgIE9mZmljZURvY3VtZW50cyA9IHNvZnR3YXJlc3lzdGVtICJEb2N1bWVudHMiICIuLi4uIiAKICAgICAgICAgICAgICAgICAgICBFbWFpbHMgPSBzb2Z0d2FyZXN5c3RlbSAiRW1haWwiICIuLi4uIiAKICAgICAgICAgICAgICAgICAgICBDaGF0cyA9IHNvZnR3YXJlc3lzdGVtICJDaGF0IC8gUG9zdHMiICIuLi4uIiAKICAgICAgICAgICAgICAgICAgICBXZWJQYWdlcyA9IHNvZnR3YXJlc3lzdGVtICJXaWtpcyAmIFdlYnBhZ2VzIiAiLi4uLiIgCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBncm91cCAiTWljcm9zb2Z0IER5bmFtaWNzIDM2NSIgewogICAgICAgICAgICAgICAgICAgIER5bmFtaWNzQ0UgPSBzb2Z0d2FyZXN5c3RlbSAiRHluYW1pY3MgQyAmIEUiICIuLi4uIiAKICAgICAgICAgICAgICAgICAgICBEeW5hbWljc0ZPID0gc29mdHdhcmVzeXN0ZW0gIkR5bmFtaWNzIEYgJiBPIiAiLi4uLiIgCiAgICAgICAgICAgICAgICAgICAgRGF0YXZlcnNlID0gc29mdHdhcmVzeXN0ZW0gIkRhdGF2ZXJzZSIgIi4uLi4iIAogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGdyb3VwICJPbiBQcmVtaXNlIiB7CiAgICAgICAgICAgICAgICAgICAgT25QcmVtaXNlU291cmNlc1N5c3RlbSA9IHNvZnR3YXJlc3lzdGVtICJPbiBQcmVtaXNlIFNvdXJjZSBTeXN0ZW1zIiAiLi4uLiIgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YWJhc2Vfb3Bfc3FsID0gY29udGFpbmVyICJEYXRhYmFzZSAtIFNRTCIgIiIgIk9yYWNsZSBEYXRhYmFzZSBTY2hlbWEiICJEYXRhYmFzZSIKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgZ3JvdXAgIk90aGVyIENsb3VkcyIgewogICAgICAgICAgICAgICAgICAgIEFXUyA9IHNvZnR3YXJlc3lzdGVtICJBV1MiICIuLi4uIiB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBSRFMgPSBjb250YWluZXIgIkFXUyBSRFMiICIiICJPcmFjbGUgRGF0YWJhc2UgU2NoZW1hIiAiRGF0YWJhc2UiCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIEdvb2dsZSA9IHNvZnR3YXJlc3lzdGVtICJHb29nbGUiICIuLi4uIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIEJpZ1F1ZXJ5ID0gY29udGFpbmVyICJCaWcgUXVlcnkiICIiICJPcmFjbGUgRGF0YWJhc2UgU2NoZW1hIiAiRGF0YWJhc2UiCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgCiAgICAgICAgICAgIH0KICAgIAogICAgICAgICAgICAjIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiBwZW9wbGUgYW5kIHNvZnR3YXJlIHN5c3RlbXMKICAgICAgICAgICAgRGF0YUVuZ2luZWVyIC0+IEFkc0dvRmFzdENvcmUgIi4uLiIKICAgICAgICAgICAgcGJpIC0+IEluZm9ybWF0aW9uQ29uc3VtZXIgIi4uLiIKCiAgICAgICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIGNvbnRhaW5lcnMKICAgICAgICAgICAgRGF0YUVuZ2luZWVyIC0+IHdlYkFwcGxpY2F0aW9uICJWaXNpdHMgYmlnYmFuay5jb20vaWIgdXNpbmciICJIVFRQUyIKICAgICAgICAgICAgd2ViQXBwbGljYXRpb24gLT4gZGF0YWJhc2UgIi4uIgogICAgICAgICAgICBkYXRhYmFzZV9vcF9zcWwgLT4gYWRmICIuLiIKICAgICAgICAgICAgQWRzR29GYXN0Q29yZSAtPiBBZHNHb0Zhc3RFeGVjdXRpb25FbmdpbmVzICIuLiIKCiAgICAgICAgICAgICMgcmVsYXRpb25zaGlwcyB0by9mcm9tIGNvbXBvbmVudHMKICAgICAgICAgICAgc2lnbmluQ29udHJvbGxlciAtPiBzZWN1cml0eUNvbXBvbmVudCAiVXNlcyIKICAgICAgICAgICAgYWNjb3VudHNTdW1tYXJ5Q29udHJvbGxlciAtPiBtYWluZnJhbWVCYW5raW5nU3lzdGVtRmFjYWRlICJVc2VzIgogICAgICAgICAgICByZXNldFBhc3N3b3JkQ29udHJvbGxlciAtPiBzZWN1cml0eUNvbXBvbmVudCAiVXNlcyIKICAgICAgICAgICAgcmVzZXRQYXNzd29yZENvbnRyb2xsZXIgLT4gZW1haWxDb21wb25lbnQgIlVzZXMiCiAgICAgICAgICAgIHNlY3VyaXR5Q29tcG9uZW50IC0+IGRhdGFiYXNlICJSZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8iICJKREJDIgogICAgICAgICAgICBtYWluZnJhbWVCYW5raW5nU3lzdGVtRmFjYWRlIC0+IG1haW5mcmFtZSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiWE1ML0hUVFBTIgogICAgICAgICAgICBlbWFpbENvbXBvbmVudCAtPiBlbWFpbCAiU2VuZHMgZS1tYWlsIHVzaW5nIgogICAgfQogICAgCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtTGFuZHNjYXBlICJTeXN0ZW1MYW5kc2NhcGUiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIHN5c3RlbWNvbnRleHQgQWRzR29GYXN0Q29yZSAiU3lzdGVtQ29udGV4dCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYW5pbWF0aW9uIHsKICAgICAgICAgICAgICAgIEFkc0dvRmFzdENvcmUKICAgICAgICAgICAgICAgIERhdGFFbmdpbmVlcgogICAgICAgICAgICAgICAgbWFpbmZyYW1lCiAgICAgICAgICAgICAgICBlbWFpbAogICAgICAgICAgICB9CiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBBZHNHb0Zhc3RDb3JlICJDb250YWluZXJzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhbmltYXRpb24gewogICAgICAgICAgICAgICAgRGF0YUVuZ2luZWVyIG1haW5mcmFtZSBlbWFpbCBPblByZW1pc2VTb3VyY2VzU3lzdGVtCiAgICAgICAgICAgICAgICB3ZWJBcHBsaWNhdGlvbgogICAgICAgICAgICAgICAgYXBpQXBwbGljYXRpb24KICAgICAgICAgICAgICAgIGRhdGFiYXNlCiAgICAgICAgICAgIH0KICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGFwaUFwcGxpY2F0aW9uICJDb21wb25lbnRzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhbmltYXRpb24gewogICAgICAgICAgICAgICAgZGF0YWJhc2UgZW1haWwgbWFpbmZyYW1lCiAgICAgICAgICAgICAgICBzaWduaW5Db250cm9sbGVyIHNlY3VyaXR5Q29tcG9uZW50CiAgICAgICAgICAgICAgICBhY2NvdW50c1N1bW1hcnlDb250cm9sbGVyIG1haW5mcmFtZUJhbmtpbmdTeXN0ZW1GYWNhZGUKICAgICAgICAgICAgICAgIHJlc2V0UGFzc3dvcmRDb250cm9sbGVyIGVtYWlsQ29tcG9uZW50CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgZHluYW1pYyBhcGlBcHBsaWNhdGlvbiAiU2lnbkluIiAiU3VtbWFyaXNlcyBob3cgdGhlIHNpZ24gaW4gZmVhdHVyZSB3b3JrcyBpbiB0aGUgc2luZ2xlLXBhZ2UgYXBwbGljYXRpb24uIiB7CiAgICAgICAgICAgIAogICAgICAgICAgICBzaWduaW5Db250cm9sbGVyIC0+IHNlY3VyaXR5Q29tcG9uZW50ICJWYWxpZGF0ZXMgY3JlZGVudGlhbHMgdXNpbmciCiAgICAgICAgICAgIHNlY3VyaXR5Q29tcG9uZW50IC0+IGRhdGFiYXNlICJzZWxlY3QgKiBmcm9tIHVzZXJzIHdoZXJlIHVzZXJuYW1lID0gPyIKICAgICAgICAgICAgZGF0YWJhc2UgLT4gc2VjdXJpdHlDb21wb25lbnQgIlJldHVybnMgdXNlciBkYXRhIHRvIgogICAgICAgICAgICBzZWN1cml0eUNvbXBvbmVudCAtPiBzaWduaW5Db250cm9sbGVyICJSZXR1cm5zIHRydWUgaWYgdGhlIGhhc2hlZCBwYXNzd29yZCBtYXRjaGVzIgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgfQoKICAgIAogICAgCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgICAgICBmb250U2l6ZSAyMgogICAgICAgICAgICAgICAgc2hhcGUgUGVyc29uCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YUVuZ2luZWVyIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwODQyN2IKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJCYW5rIFN0YWZmIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJTb2Z0d2FyZSBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzExNjhiZAogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkV4aXN0aW5nIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29udGFpbmVyIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM0MzhkZDUKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJXZWIgQnJvd3NlciIgewogICAgICAgICAgICAgICAgc2hhcGUgV2ViQnJvd3NlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIk1vYmlsZSBBcHAiIHsKICAgICAgICAgICAgICAgIHNoYXBlIE1vYmlsZURldmljZUxhbmRzY2FwZQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjODViYmYwCiAgICAgICAgICAgICAgICBjb2xvciAjMDAwMDAwCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRmFpbG92ZXIiIHsKICAgICAgICAgICAgICAgIG9wYWNpdHkgMjUKICAgICAgICAgICAgfQogICAgICAgIH0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgCiAgICAgICAgdGhlbWVzIGh0dHBzOi8vc3RhdGljLnN0cnVjdHVyaXpyLmNvbS90aGVtZXMvbWljcm9zb2Z0LWF6dXJlLTIwMjAuMDcuMTMvdGhlbWUuanNvbgogICAgfQp9CgoK"
+  },
+  "configuration" : { },
+  "model" : {
+    "enterprise" : {
+      "name" : "Smart Enterprise Pty Ltd"
+    },
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person,DataEngineer",
+      "name" : "Data Engineer",
+      "description" : "...",
+      "relationships" : [ {
+        "id" : "48",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "12",
+        "description" : "Visits bigbank.com/ib using",
+        "technology" : "HTTPS"
+      }, {
+        "id" : "45",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "11",
+        "description" : "..."
+      } ],
+      "location" : "Internal"
+    }, {
+      "id" : "4",
+      "tags" : "Element,Person",
+      "name" : "Data Stewards",
+      "location" : "Internal"
+    }, {
+      "id" : "7",
+      "tags" : "Element,Person",
+      "name" : "Chief Data Officer",
+      "location" : "Internal"
+    }, {
+      "id" : "2",
+      "tags" : "Element,Person",
+      "name" : "Data / Report Consumer",
+      "location" : "Internal"
+    }, {
+      "id" : "3",
+      "tags" : "Element,Person",
+      "name" : "Information Worker",
+      "location" : "Internal"
+    }, {
+      "id" : "6",
+      "tags" : "Element,Person",
+      "name" : "Chief Information Security Officer",
+      "location" : "Internal"
+    }, {
+      "id" : "5",
+      "tags" : "Element,Person",
+      "name" : "Security Admin",
+      "location" : "Internal"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "37",
+      "tags" : "Element,Software System",
+      "name" : "Dynamics F & O",
+      "description" : "....",
+      "group" : "Microsoft Dynamics 365",
+      "location" : "Internal"
+    }, {
+      "id" : "38",
+      "tags" : "Element,Software System",
+      "name" : "Dataverse",
+      "description" : "....",
+      "group" : "Microsoft Dynamics 365",
+      "location" : "Internal"
+    }, {
+      "id" : "21",
+      "tags" : "Element,Software System",
+      "name" : "Task Execution Engines",
+      "description" : "...",
+      "group" : "Azure",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "22",
+        "tags" : "Element,Container",
+        "name" : "Azure Data Factory",
+        "description" : "...",
+        "technology" : "...."
+      } ]
+    }, {
+      "id" : "11",
+      "tags" : "Element,Software System",
+      "name" : "ADS Go Fast Core",
+      "description" : "...",
+      "relationships" : [ {
+        "id" : "66",
+        "tags" : "Relationship",
+        "sourceId" : "11",
+        "destinationId" : "9",
+        "description" : "Sends e-mail using"
+      }, {
+        "id" : "54",
+        "tags" : "Relationship",
+        "sourceId" : "11",
+        "destinationId" : "21",
+        "description" : ".."
+      }, {
+        "id" : "63",
+        "tags" : "Relationship",
+        "sourceId" : "11",
+        "destinationId" : "8",
+        "description" : "Makes API calls to",
+        "technology" : "XML/HTTPS"
+      } ],
+      "group" : "Azure",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "20",
+        "tags" : "Element,Container,Microsoft Azure - SQL Database,Database",
+        "name" : "ADS Go Fast Metadata DB",
+        "description" : "Stores task metadata and settings for the ADS Go Fast Framework",
+        "technology" : "ADS Go Fast Metadata DB"
+      }, {
+        "id" : "13",
+        "tags" : "Element,Container",
+        "name" : "API Application",
+        "description" : "Ads Go Fast Orchestration Function App",
+        "relationships" : [ {
+          "id" : "65",
+          "tags" : "Relationship",
+          "sourceId" : "13",
+          "destinationId" : "9",
+          "description" : "Sends e-mail using"
+        }, {
+          "id" : "60",
+          "tags" : "Relationship",
+          "sourceId" : "13",
+          "destinationId" : "20",
+          "description" : "Reads from and writes to",
+          "technology" : "JDBC"
+        }, {
+          "id" : "62",
+          "tags" : "Relationship",
+          "sourceId" : "13",
+          "destinationId" : "8",
+          "description" : "Makes API calls to",
+          "technology" : "XML/HTTPS"
+        } ],
+        "technology" : ".Net Core",
+        "components" : [ {
+          "id" : "19",
+          "tags" : "Element,Component",
+          "name" : "E-mail Component",
+          "description" : "Sends e-mails to users.",
+          "relationships" : [ {
+            "id" : "64",
+            "tags" : "Relationship",
+            "sourceId" : "19",
+            "destinationId" : "9",
+            "description" : "Sends e-mail using"
+          } ],
+          "technology" : "Spring Bean",
+          "size" : 0
+        }, {
+          "id" : "17",
+          "tags" : "Element,Component",
+          "name" : "Security Component",
+          "description" : "Provides functionality related to signing in, changing passwords, etc.",
+          "relationships" : [ {
+            "id" : "59",
+            "tags" : "Relationship",
+            "sourceId" : "17",
+            "destinationId" : "20",
+            "description" : "Reads from and writes to",
+            "technology" : "JDBC"
+          } ],
+          "technology" : "Spring Bean",
+          "size" : 0
+        }, {
+          "id" : "15",
+          "tags" : "Element,Component",
+          "name" : "Accounts Summary Controller",
+          "description" : "Provides DataEngineers with a summary of their bank accounts.",
+          "relationships" : [ {
+            "id" : "56",
+            "tags" : "Relationship",
+            "sourceId" : "15",
+            "destinationId" : "18",
+            "description" : "Uses"
+          } ],
+          "technology" : "Spring MVC Rest Controller",
+          "size" : 0
+        }, {
+          "id" : "14",
+          "tags" : "Element,Component",
+          "name" : "Sign In Controller",
+          "description" : "Allows users to sign in to the Internet Banking System.",
+          "relationships" : [ {
+            "id" : "55",
+            "tags" : "Relationship",
+            "sourceId" : "14",
+            "destinationId" : "17",
+            "description" : "Uses"
+          } ],
+          "technology" : "Spring MVC Rest Controller",
+          "size" : 0
+        }, {
+          "id" : "16",
+          "tags" : "Element,Component",
+          "name" : "Reset Password Controller",
+          "description" : "Allows users to reset their passwords with a single use URL.",
+          "relationships" : [ {
+            "id" : "57",
+            "tags" : "Relationship",
+            "sourceId" : "16",
+            "destinationId" : "17",
+            "description" : "Uses"
+          }, {
+            "id" : "58",
+            "tags" : "Relationship",
+            "sourceId" : "16",
+            "destinationId" : "19",
+            "description" : "Uses"
+          } ],
+          "technology" : "Spring MVC Rest Controller",
+          "size" : 0
+        }, {
+          "id" : "18",
+          "tags" : "Element,Component",
+          "name" : "Mainframe Banking System Facade",
+          "description" : "A facade onto the mainframe banking system.",
+          "relationships" : [ {
+            "id" : "61",
+            "tags" : "Relationship",
+            "sourceId" : "18",
+            "destinationId" : "8",
+            "description" : "Makes API calls to",
+            "technology" : "XML/HTTPS"
+          } ],
+          "technology" : "Spring Bean",
+          "size" : 0
+        } ]
+      }, {
+        "id" : "12",
+        "tags" : "Element,Container",
+        "name" : "Web Application",
+        "description" : "...",
+        "relationships" : [ {
+          "id" : "49",
+          "tags" : "Relationship",
+          "sourceId" : "12",
+          "destinationId" : "20",
+          "description" : ".."
+        } ],
+        "technology" : ".Net Core MVC"
+      } ]
+    }, {
+      "id" : "23",
+      "tags" : "Element,Software System",
+      "name" : "Reporting & Analytics Services",
+      "description" : "...",
+      "relationships" : [ {
+        "id" : "47",
+        "tags" : "Relationship",
+        "sourceId" : "23",
+        "destinationId" : "2",
+        "description" : "..."
+      } ],
+      "group" : "Azure",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "24",
+        "tags" : "Element,Container",
+        "name" : "Power Bi",
+        "description" : "...",
+        "relationships" : [ {
+          "id" : "46",
+          "tags" : "Relationship",
+          "sourceId" : "24",
+          "destinationId" : "2",
+          "description" : "..."
+        } ],
+        "technology" : "...."
+      } ]
+    }, {
+      "id" : "35",
+      "tags" : "Element,Software System",
+      "name" : "Wikis & Webpages",
+      "description" : "....",
+      "group" : "Microsoft Office 365",
+      "location" : "Internal"
+    }, {
+      "id" : "41",
+      "tags" : "Element,Software System",
+      "name" : "AWS",
+      "description" : "....",
+      "group" : "Other Clouds",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "42",
+        "tags" : "Element,Container,Database",
+        "name" : "AWS RDS",
+        "technology" : "Oracle Database Schema"
+      } ]
+    }, {
+      "id" : "43",
+      "tags" : "Element,Software System",
+      "name" : "Google",
+      "description" : "....",
+      "group" : "Other Clouds",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "44",
+        "tags" : "Element,Container,Database",
+        "name" : "Big Query",
+        "technology" : "Oracle Database Schema"
+      } ]
+    }, {
+      "id" : "25",
+      "tags" : "Element,Software System",
+      "name" : "DataLake",
+      "description" : "...",
+      "group" : "Azure",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "27",
+        "tags" : "Element,Container",
+        "name" : "ADLS - Bronze",
+        "description" : "...",
+        "technology" : "...."
+      }, {
+        "id" : "26",
+        "tags" : "Element,Container",
+        "name" : "ADLS - Landing",
+        "description" : "...",
+        "technology" : "...."
+      }, {
+        "id" : "29",
+        "tags" : "Element,Container",
+        "name" : "ADLS - Gold",
+        "description" : "...",
+        "technology" : "...."
+      }, {
+        "id" : "28",
+        "tags" : "Element,Container",
+        "name" : "ADLS - Silver",
+        "description" : "...",
+        "technology" : "...."
+      } ]
+    }, {
+      "id" : "30",
+      "tags" : "Element,Software System",
+      "name" : "PowerBi",
+      "description" : "....",
+      "group" : "Microsoft Power Platform",
+      "location" : "Internal"
+    }, {
+      "id" : "39",
+      "tags" : "Element,Software System",
+      "name" : "On Premise Source Systems",
+      "description" : "....",
+      "relationships" : [ {
+        "id" : "53",
+        "tags" : "Relationship",
+        "sourceId" : "39",
+        "destinationId" : "21",
+        "description" : ".."
+      }, {
+        "id" : "52",
+        "tags" : "Relationship",
+        "sourceId" : "39",
+        "destinationId" : "22",
+        "description" : ".."
+      } ],
+      "group" : "On Premise",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "40",
+        "tags" : "Element,Container,Database",
+        "name" : "Database - SQL",
+        "relationships" : [ {
+          "id" : "50",
+          "tags" : "Relationship",
+          "sourceId" : "40",
+          "destinationId" : "22",
+          "description" : ".."
+        }, {
+          "id" : "51",
+          "tags" : "Relationship",
+          "sourceId" : "40",
+          "destinationId" : "21",
+          "description" : ".."
+        } ],
+        "technology" : "Oracle Database Schema"
+      } ]
+    }, {
+      "id" : "34",
+      "tags" : "Element,Software System",
+      "name" : "Chat / Posts",
+      "description" : "....",
+      "group" : "Microsoft Office 365",
+      "location" : "Internal"
+    }, {
+      "id" : "33",
+      "tags" : "Element,Software System",
+      "name" : "Email",
+      "description" : "....",
+      "group" : "Microsoft Office 365",
+      "location" : "Internal"
+    }, {
+      "id" : "8",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "Mainframe Banking System",
+      "description" : "Stores all of the core banking information about DataEngineers, accounts, transactions, etc.",
+      "group" : "Azure",
+      "location" : "Internal"
+    }, {
+      "id" : "32",
+      "tags" : "Element,Software System",
+      "name" : "Documents",
+      "description" : "....",
+      "group" : "Microsoft Office 365",
+      "location" : "Internal"
+    }, {
+      "id" : "9",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "E-mail System",
+      "description" : "The internal Microsoft Exchange e-mail system.",
+      "group" : "Azure",
+      "location" : "Internal"
+    }, {
+      "id" : "10",
+      "tags" : "Element,Software System,Existing System",
+      "name" : "ATM",
+      "description" : "Allows DataEngineers to withdraw cash.",
+      "group" : "Azure",
+      "location" : "Internal"
+    }, {
+      "id" : "36",
+      "tags" : "Element,Software System",
+      "name" : "Dynamics C & E",
+      "description" : "....",
+      "group" : "Microsoft Dynamics 365",
+      "location" : "Internal"
+    }, {
+      "id" : "31",
+      "tags" : "Element,Software System",
+      "name" : "Power Apps",
+      "description" : "....",
+      "group" : "Microsoft Power Platform",
+      "location" : "Internal"
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemLandscapeViews" : [ {
+      "key" : "SystemLandscape",
+      "paperSize" : "A0_Landscape",
+      "dimensions" : {
+        "width" : 12950,
+        "height" : 2466
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "23",
+        "x" : 1596,
+        "y" : 1034
+      }, {
+        "id" : "25",
+        "x" : 3096,
+        "y" : 1034
+      }, {
+        "id" : "30",
+        "x" : 12108,
+        "y" : 384
+      }, {
+        "id" : "31",
+        "x" : 11358,
+        "y" : 384
+      }, {
+        "id" : "10",
+        "x" : 2346,
+        "y" : 1034
+      }, {
+        "id" : "32",
+        "x" : 10596,
+        "y" : 384
+      }, {
+        "id" : "11",
+        "x" : 3846,
+        "y" : 1034
+      }, {
+        "id" : "33",
+        "x" : 9846,
+        "y" : 384
+      }, {
+        "id" : "34",
+        "x" : 9096,
+        "y" : 384
+      }, {
+        "id" : "35",
+        "x" : 8346,
+        "y" : 384
+      }, {
+        "id" : "36",
+        "x" : 7583,
+        "y" : 384
+      }, {
+        "id" : "37",
+        "x" : 6833,
+        "y" : 384
+      }, {
+        "id" : "38",
+        "x" : 6083,
+        "y" : 384
+      }, {
+        "id" : "39",
+        "x" : 4608,
+        "y" : 1034
+      }, {
+        "id" : "1",
+        "x" : 3871,
+        "y" : 334
+      }, {
+        "id" : "2",
+        "x" : 987,
+        "y" : 1634
+      }, {
+        "id" : "3",
+        "x" : 3171,
+        "y" : 334
+      }, {
+        "id" : "4",
+        "x" : 2471,
+        "y" : 334
+      }, {
+        "id" : "5",
+        "x" : 1771,
+        "y" : 334
+      }, {
+        "id" : "6",
+        "x" : 1071,
+        "y" : 334
+      }, {
+        "id" : "7",
+        "x" : 371,
+        "y" : 334
+      }, {
+        "id" : "8",
+        "x" : 3096,
+        "y" : 1684
+      }, {
+        "id" : "9",
+        "x" : 2346,
+        "y" : 1684
+      }, {
+        "id" : "41",
+        "x" : 5321,
+        "y" : 384
+      }, {
+        "id" : "21",
+        "x" : 3846,
+        "y" : 1684
+      }, {
+        "id" : "43",
+        "x" : 4571,
+        "y" : 384
+      } ],
+      "relationships" : [ {
+        "id" : "63"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "66",
+        "vertices" : [ {
+          "x" : 3696,
+          "y" : 1438
+        }, {
+          "x" : 2946,
+          "y" : 1634
+        } ]
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "47"
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "softwareSystemId" : "11",
+      "key" : "SystemContext",
+      "paperSize" : "A4_Landscape",
+      "dimensions" : {
+        "width" : 2816,
+        "height" : 2362
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "animations" : [ {
+        "order" : 1,
+        "elements" : [ "11" ]
+      }, {
+        "order" : 2,
+        "elements" : [ "1" ],
+        "relationships" : [ "45" ]
+      }, {
+        "order" : 3,
+        "elements" : [ "8" ],
+        "relationships" : [ "63" ]
+      }, {
+        "order" : 4,
+        "elements" : [ "9" ],
+        "relationships" : [ "66" ]
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 1183,
+        "y" : 1007
+      }, {
+        "id" : "1",
+        "x" : 1208,
+        "y" : 307
+      }, {
+        "id" : "8",
+        "x" : 433,
+        "y" : 1607
+      }, {
+        "id" : "9",
+        "x" : 1183,
+        "y" : 1607
+      }, {
+        "id" : "21",
+        "x" : 1933,
+        "y" : 1607
+      } ],
+      "relationships" : [ {
+        "id" : "63"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "66"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "softwareSystemId" : "11",
+      "key" : "Containers",
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "animations" : [ {
+        "order" : 1,
+        "elements" : [ "1", "8", "9" ]
+      }, {
+        "order" : 2,
+        "elements" : [ "12" ],
+        "relationships" : [ "48" ]
+      }, {
+        "order" : 3,
+        "elements" : [ "13" ],
+        "relationships" : [ "62", "65" ]
+      }, {
+        "order" : 4,
+        "elements" : [ "20" ],
+        "relationships" : [ "49", "60" ]
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "relationships" : [ {
+        "id" : "60"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "49"
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "Components",
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "animations" : [ {
+        "order" : 1,
+        "elements" : [ "8", "9", "20" ]
+      }, {
+        "order" : 2,
+        "elements" : [ "14", "17" ],
+        "relationships" : [ "55", "59" ]
+      }, {
+        "order" : 3,
+        "elements" : [ "15", "18" ],
+        "relationships" : [ "56", "61" ]
+      }, {
+        "order" : 4,
+        "elements" : [ "16", "19" ],
+        "relationships" : [ "57", "58", "64" ]
+      } ],
+      "containerId" : "13",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "relationships" : [ {
+        "id" : "61"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "59"
+      } ]
+    } ],
+    "dynamicViews" : [ {
+      "description" : "Summarises how the sign in feature works in the single-page application.",
+      "key" : "SignIn",
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "elementId" : "13",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "55",
+        "description" : "Validates credentials using",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "59",
+        "description" : "select * from users where username = ?",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "59",
+        "description" : "Returns user data to",
+        "order" : "3",
+        "response" : true
+      }, {
+        "id" : "55",
+        "description" : "Returns true if the hashed password matches",
+        "order" : "4",
+        "response" : true
+      } ],
+      "elements" : [ {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Person",
+          "color" : "#ffffff",
+          "fontSize" : 22,
+          "shape" : "Person"
+        }, {
+          "tag" : "DataEngineer",
+          "background" : "#08427b"
+        }, {
+          "tag" : "Bank Staff",
+          "background" : "#999999"
+        }, {
+          "tag" : "Software System",
+          "background" : "#1168bd",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Existing System",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Container",
+          "background" : "#438dd5",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Web Browser",
+          "shape" : "WebBrowser"
+        }, {
+          "tag" : "Mobile App",
+          "shape" : "MobileDeviceLandscape"
+        }, {
+          "tag" : "Database",
+          "shape" : "Cylinder"
+        }, {
+          "tag" : "Component",
+          "background" : "#85bbf0",
+          "color" : "#000000"
+        }, {
+          "tag" : "Failover",
+          "opacity" : 25
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/microsoft-azure-2020.07.13/theme.json" ],
+      "terminology" : { },
+      "lastSavedView" : "SystemContext"
+    }
+  }
+}

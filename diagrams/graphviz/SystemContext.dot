@@ -1,0 +1,24 @@
+digraph {
+  compound=true
+  graph [splines=polyline,rankdir=TB,ranksep=1.0,nodesep=1.0,fontsize=5]
+  node [shape=box,fontsize=5]
+  edge []
+
+  subgraph cluster_enterprise {
+    margin=25
+    subgraph cluster_group_1 {
+      margin=25
+      11 [width=1.500000,height=1.000000,fixedsize=true,id=11,label="11: ADS Go Fast Core"]
+      8 [width=1.500000,height=1.000000,fixedsize=true,id=8,label="8: Mainframe Banking System"]
+      9 [width=1.500000,height=1.000000,fixedsize=true,id=9,label="9: E-mail System"]
+      21 [width=1.500000,height=1.000000,fixedsize=true,id=21,label="21: Task Execution Engines"]
+    }
+    1 [width=1.333333,height=1.333333,fixedsize=true,id=1,label="1: Data Engineer"]
+  }
+
+
+  11 -> 8 [id=63]
+  11 -> 21 [id=54]
+  1 -> 11 [id=45]
+  11 -> 9 [id=66]
+}

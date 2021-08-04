@@ -1,0 +1,22 @@
+digraph {
+  compound=true
+  graph [splines=polyline,rankdir=TB,ranksep=1.0,nodesep=1.0,fontsize=5]
+  node [shape=box,fontsize=5]
+  edge []
+
+  subgraph cluster_7 {
+    margin=25
+    16 [width=1.500000,height=1.000000,fixedsize=true,id=16,label="16: ADS Go Fast Metadata DB"]
+    8 [width=1.500000,height=1.000000,fixedsize=true,id=8,label="8: Web Application"]
+    9 [width=1.500000,height=1.000000,fixedsize=true,id=9,label="9: API Application"]
+  }
+  1 [width=1.333333,height=1.333333,fixedsize=true,id=1,label="1: Data Engineer"]
+  4 [width=1.500000,height=1.000000,fixedsize=true,id=4,label="4: Mainframe Banking System"]
+  5 [width=1.500000,height=1.000000,fixedsize=true,id=5,label="5: E-mail System"]
+
+  9 -> 16 [id=43]
+  8 -> 16 [id=32]
+  9 -> 4 [id=45]
+  1 -> 8 [id=31]
+  9 -> 5 [id=48]
+}

@@ -1,1 +1,1 @@
-docker run -v "C:\Users\jorampon\source\GitHubJR\GeneralDiagrams\Structurizr\examples\aws:/usr/local/structurizr" -d -p 8080:8080 structurizr/lite
+docker run -v "/Users/jrambo/source/GitMS/microsoft-data-governance-accelerator/diagrams:/usr/local/structurizr" -d -p 8080:8080 structurizr/lite
