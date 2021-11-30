@@ -1,0 +1,29 @@
+properties {
+  $environmentfilepath = "./environments/"
+  $testMessage = 'Executed Test!'
+  $compileMessage = 'Executed Compile!'
+  $cleanMessage = 'Executed Clean!'
+}
+
+task default -depends Test
+
+task LoadSettings {
+      exec {  ./LocalDevOnly_EnvironmentSetUp.ps1 }
+}
+
+
+task Test -depends Compile, Clean {
+  $testMessage
+}
+
+task Compile -depends Clean {
+  $compileMessage
+}
+
+task Clean {
+  $cleanMessage
+}
+
+task ? -Description "Helper to display task info" {
+  Write-Documentation
+}

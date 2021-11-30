@@ -1,6 +1,6 @@
 digraph {
   compound=true
-  graph [splines=polyline,rankdir=TB,ranksep=1.0,nodesep=1.0,fontsize=5]
+  graph [splines=polyline,rankdir=LR,ranksep=1.0,nodesep=1.0,fontsize=5]
   node [shape=box,fontsize=5]
   edge []
 
@@ -8,55 +8,29 @@ digraph {
     margin=25
     subgraph cluster_group_1 {
       margin=25
-      23 [width=1.500000,height=1.000000,fixedsize=true,id=23,label="23: Reporting & Analytics Services"]
-      25 [width=1.500000,height=1.000000,fixedsize=true,id=25,label="25: DataLake"]
-      10 [width=1.500000,height=1.000000,fixedsize=true,id=10,label="10: ATM"]
-      11 [width=1.500000,height=1.000000,fixedsize=true,id=11,label="11: ADS Go Fast Core"]
-      8 [width=1.500000,height=1.000000,fixedsize=true,id=8,label="8: Mainframe Banking System"]
-      9 [width=1.500000,height=1.000000,fixedsize=true,id=9,label="9: E-mail System"]
-      21 [width=1.500000,height=1.000000,fixedsize=true,id=21,label="21: Task Execution Engines"]
+      13 [width=1.500000,height=1.000000,fixedsize=true,id=13,label="13: Power BI Audit Processing Solution"]
+      5 [width=1.500000,height=1.000000,fixedsize=true,id=5,label="5: Power BI Audit Capture Solution"]
+      17 [width=1.500000,height=1.000000,fixedsize=true,id=17,label="17: Power Platform"]
+      10 [width=1.500000,height=1.000000,fixedsize=true,id=10,label="10: Power BI Metadata & Telemetry Capture Solution"]
+      21 [width=1.500000,height=1.000000,fixedsize=true,id=21,label="21: Enterprise Audit Storage & Analytics"]
     }
     subgraph cluster_group_2 {
       margin=25
-      30 [width=1.500000,height=1.000000,fixedsize=true,id=30,label="30: PowerBi"]
-      31 [width=1.500000,height=1.000000,fixedsize=true,id=31,label="31: Power Apps"]
+      3 [width=1.500000,height=1.000000,fixedsize=true,id=3,label="3: Client Web Browsers"]
     }
-    subgraph cluster_group_3 {
-      margin=25
-      32 [width=1.500000,height=1.000000,fixedsize=true,id=32,label="32: Documents"]
-      33 [width=1.500000,height=1.000000,fixedsize=true,id=33,label="33: Email"]
-      34 [width=1.500000,height=1.000000,fixedsize=true,id=34,label="34: Chat / Posts"]
-      35 [width=1.500000,height=1.000000,fixedsize=true,id=35,label="35: Wikis & Webpages"]
-    }
-    subgraph cluster_group_4 {
-      margin=25
-      36 [width=1.500000,height=1.000000,fixedsize=true,id=36,label="36: Dynamics C & E"]
-      37 [width=1.500000,height=1.000000,fixedsize=true,id=37,label="37: Dynamics F & O"]
-      38 [width=1.500000,height=1.000000,fixedsize=true,id=38,label="38: Dataverse"]
-    }
-    subgraph cluster_group_5 {
-      margin=25
-      39 [width=1.500000,height=1.000000,fixedsize=true,id=39,label="39: On Premise Source Systems"]
-    }
-    subgraph cluster_group_6 {
-      margin=25
-      41 [width=1.500000,height=1.000000,fixedsize=true,id=41,label="41: AWS"]
-      43 [width=1.500000,height=1.000000,fixedsize=true,id=43,label="43: Google"]
-    }
-    1 [width=1.333333,height=1.333333,fixedsize=true,id=1,label="1: Data Engineer"]
-    2 [width=1.333333,height=1.333333,fixedsize=true,id=2,label="2: Data / Report Consumer"]
-    3 [width=1.333333,height=1.333333,fixedsize=true,id=3,label="3: Information Worker"]
-    4 [width=1.333333,height=1.333333,fixedsize=true,id=4,label="4: Data Stewards"]
-    5 [width=1.333333,height=1.333333,fixedsize=true,id=5,label="5: Security Admin"]
-    6 [width=1.333333,height=1.333333,fixedsize=true,id=6,label="6: Chief Information Security Officer"]
-    7 [width=1.333333,height=1.333333,fixedsize=true,id=7,label="7: Chief Data Officer"]
+    1 [width=1.333333,height=1.333333,fixedsize=true,id=1,label="1: Information Consumer"]
+    2 [width=1.333333,height=1.333333,fixedsize=true,id=2,label="2: Information Producer"]
   }
 
 
-  11 -> 8 [id=63]
-  39 -> 21 [id=53]
-  11 -> 21 [id=54]
-  11 -> 9 [id=66]
-  1 -> 11 [id=45]
-  23 -> 2 [id=47]
+  5 -> 3 [id=28]
+  17 -> 5 [id=40]
+  5 -> 17 [id=36]
+  3 -> 1 [id=24]
+  13 -> 21 [id=53]
+  10 -> 5 [id=64]
+  3 -> 5 [id=32]
+  2 -> 5 [id=55]
+  5 -> 13 [id=47]
+  17 -> 10 [id=59]
 }

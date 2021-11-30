@@ -1,119 +1,117 @@
 
-workspace "Big Bank plc" "This is an example workspace to illustrate the key features of Structurizr, via the DSL, based around a fictional online banking system." {
+workspace "Azure Data Platform Reference Architecture" {
 
     model {
        
 
-            enterprise "Smart Enterprise Pty Ltd" {
-                DataEngineer = person "Data Engineer" "..." "DataEngineer"
-                InformationConsumer = person "Data / Report Consumer" "" ""
-                InformationWorker = person "Information Worker" "" ""
-                DataStewards = person "Data Stewards" "" ""
-                SecurityOfficer = person "Security Admin" "" ""
-                CISO = person "Chief Information Security Officer" "" ""
-                CDO = person "Chief Data Officer" "" ""
+            enterprise "XYZ Pty Ltd" {
+                InformationConsumer = person "Information Consumer" "" ""
+                InformationProducer = person "Information Producer" "" ""                
                 
+
+                group "ClientDevices" {
+                    cd = softwaresystem "Client Web Browsers" "" "Web Browser" {
+                        infcbrowser = container "Web Browser" "" "" "Web Browser"
+                    }
+                }
         
-                group "Azure" {
-                    DataLake = softwaresystem "DataLake" "..." {
-                        adlsLanding = container "ADLS - Landing" "..." "...."
-                        adlsBronze = container "ADLS - Bronze" "..." "...."
-                        adlsSilver = container "ADLS - Silver" "..." "...."
-                        adlsGold = container "ADLS - Gold" "..." "...."
-                    }
+                group "Microsoft Clouds" {                    
+                   
+                        pbiaudcap = softwaresystem "Power BI Audit Capture Solution"{
+                            pbiaudstor = container "Audit Files - Raw" "..." "...." "Microsoft Azure - Storage Accounts"                        
+                            pbiaudwebapp = container "Web Application" "..." "...." "Microsoft Azure - Web Environment"
+                            pbiaudwebappds = container "Web Application - Configuration" "..." "...." "Microsoft Azure - SQL Database"                        
+                            pbiaudwebappdsaut = container "AutoUpdater for Web App Configuration" "..." "...." "Microsoft Azure - Function Apps"
+                        }
+
+                        pbiutcap = softwaresystem "Power BI Metadata & Telemetry Capture Solution"{                        
+                            pbimetastor = container "Power BI Metadata & Usage" "..." "...." "Microsoft Azure - Storage Accounts"                                        
+                            pbimetafunc = container "Power BI Metadata Collection Functions" "..." "...." "Microsoft Azure - Function Apps" 
+                                                                            
+                            
+                        }
+
+                        pbiaudproc = softwaresystem "Power BI Audit Processing Solution"{
+                            pbiaudstorp = container "Audit Files - Processed" "..." "...." "Microsoft Azure - Storage Accounts"                      
+                            pbiaudtfunc = container "Post Processing Function" "..." "...." "Microsoft Azure - Function Apps"
+                            pbiaudxfunc = container "Audit File Generation Function" "..." "...." "Microsoft Azure - Function Apps"
+                            
+                        }
+
+                        pbipp = softwaresystem "Power Platform" "" "PowerBI"{
+                        pbiaudpbi = container "PowerBi Service - app.powerbi.com" "...." ""  "PowerBI"                        
+                        pbiaudpbiapi = container "PowerBi Admin Api" "...." ""  "PowerBI"
+                        pbiembeddedapi = container "PowerBi Embedded Api" "...." ""  "PowerBI"                        
+                        }
+
+                        entaud = softwaresystem "Enterprise Audit Storage & Analytics" "" ""{
+                            edlaud = container "Enterprise Data Lake for Audit Records" "...." ""  "Microsoft Azure - Storage Accounts"   
+                        }
+                    }                    
                 }
 
-                group "Microsoft Power Platform" {
-                    PowerBI = softwaresystem "PowerBi" "...."
-                    PowerApps = softwaresystem "Power Apps" "...." 
-                }
-                group "Microsoft Office 365" {
-                    OfficeDocuments = softwaresystem "Documents" "...." 
-                    Emails = softwaresystem "Email" "...." 
-                    Chats = softwaresystem "Chat / Posts" "...." 
-                    WebPages = softwaresystem "Wikis & Webpages" "...." 
-                }
-                group "Microsoft Dynamics 365" {
-                    DynamicsCE = softwaresystem "Dynamics C & E" "...." 
-                    DynamicsFO = softwaresystem "Dynamics F & O" "...." 
-                    Dataverse = softwaresystem "Dataverse" "...." 
-                }
-
-                group "On Premise" {
-                    OnPremiseSourcesSystem = softwaresystem "On Premise Source Systems" "...." {
-                            database_op_sql = container "Database - SQL" "" "Oracle Database Schema" "Database"
-                    }
-                }
-
-                group "Other Clouds" {
-                    AWS = softwaresystem "AWS" "...." {
-                            RDS = container "AWS RDS" "" "Oracle Database Schema" "Database"
-                    }
-                    Google = softwaresystem "Google" "...." {
-                        BigQuery = container "Big Query" "" "Oracle Database Schema" "Database"
-                    }
-                }
-                
             }
     
             # relationships between people and software systems
+            infcbrowser -> InformationConsumer
+            pbiaudwebapp -> infcbrowser "Response"
+            infcbrowser -> pbiaudwebapp "Request"
+            pbiaudwebapp -> pbiaudpbi "Request"
+            pbiaudpbi -> pbiaudwebapp "Response"
+            pbiaudwebapp -> pbiaudstor "Complex Response JSON"
+            pbiaudwebapp -> pbiaudwebappds
+            pbiaudwebappds -> pbiaudwebapp
+            pbiaudstor -> pbiaudtfunc
+            pbiaudtfunc ->  pbiaudstorp
+            pbiaudstorp -> pbiaudxfunc
+            pbiaudxfunc -> edlaud
+            InformationProducer -> pbiaudwebapp "Manage Application Configuration"
+            pbiaudpbiapi -> pbimetafunc
+            pbimetafunc -> pbimetastor
+            pbimetastor -> pbiaudwebappdsaut
+            pbiaudwebappdsaut -> pbiaudwebappds
 
 
-            # relationships to/from containers
-            
-
-
-            # relationships to/from components
-            
     }
     
     views {
         systemLandscape "SystemLandscape" {
             include *
-            autoLayout
+            autoLayout lr
         }
 
-        systemcontext AdsGoFastCore "SystemContext" {
+        container pbiaudcap "AuditCapatureContainerView"{
             include *
-            animation {
-                AdsGoFastCore
-                DataEngineer
-                mainframe
-                email
-            }
-            autoLayout
+            #autoLayout
+
         }
 
-        container AdsGoFastCore "Containers" {
+        container pbiutcap "MetadataCaptureContainerView"{
             include *
-            animation {
-                DataEngineer mainframe email OnPremiseSourcesSystem
-                webApplication
-                apiApplication
-                database
-            }
             autoLayout
+
         }
 
-        component apiApplication "Components" {
+        container pbiaudproc "AuditProcessingContainerView"{
             include *
-            animation {
-                database email mainframe
-                signinController securityComponent
-                accountsSummaryController mainframeBankingSystemFacade
-                resetPasswordController emailComponent
-            }
             autoLayout
+
         }
 
-        dynamic apiApplication "SignIn" "Summarises how the sign in feature works in the single-page application." {
-            
-            signinController -> securityComponent "Validates credentials using"
-            securityComponent -> database "select * from users where username = ?"
-            database -> securityComponent "Returns user data to"
-            securityComponent -> signinController "Returns true if the hashed password matches"
+        container entaud "EnterpriseAuditContainerView"{
+            include *
             autoLayout
+
         }
+
+        container pbipp "PowerPlatformContainerView"{
+            include *
+            autoLayout
+
+        }
+
+
+
 
     
     
@@ -130,16 +128,12 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                 background #999999
             }
             element "Software System" {
-                background #1168bd
-                color #ffffff
+                background #FFFFFF
             }
-            element "Existing System" {
-                background #999999
-                color #ffffff
-            }
+            
             element "Container" {
-                background #438dd5
-                color #ffffff
+                background #f7f7f7
+                #color #ffffff
             }
             element "Web Browser" {
                 shape WebBrowser
@@ -154,12 +148,65 @@ workspace "Big Bank plc" "This is an example workspace to illustrate the key fea
                 background #85bbf0
                 color #000000
             }
+            
+
             element "Failover" {
                 opacity 25
             }
+            element "PowerBI" {
+                icon icons/PowerBI-Icon-Transparent.png
+            }
+            element "Purview" {
+                icon icons/azure-purview-logo.png
+            }
+
+            element "OnPrem" {
+                icon icons/enterprise_building.png
+            }
+
+            element "Lockbox" {
+                icon icons/Resource-Groups.png
+                stroke #424549
+            }
+
+             element "adsgofast" {
+                icon icons/ads_go_fast.png
+                stroke #424549
+            }
+
+            element "datashare" {
+                icon icons/Data-Share.png
+            }
+
+
+            relationship "BlockedFlow" {
+                color #DE2D1F
+                colour #DE2D1F
+                dashed false
+            }
+
+            relationship "AuditFlow" {
+                color #0000FF
+                colour #0000FF
+                dashed false
+            }
+
+            relationship "AccessFlow" {
+                color #228B22 
+                colour #228B22 
+                dashed false
+            }
+
+            relationship "DataFlow" {
+                color #D1D100 
+                colour #D1D100 
+                dashed false
+            }
+
         }                               
         
-        themes https://static.structurizr.com/themes/microsoft-azure-2020.07.13/theme.json
+        themes https://static.structurizr.com/themes/microsoft-azure-2021.01.26/theme.json
+        
     }
 }
 

@@ -1,0 +1,177 @@
+{
+  "AdsOpts": {
+    "CI": {
+      "Enable": true,
+      "BuildFunctionApp": true,
+      "BuildWebApp": true,
+      "BuildAdsGoFastDatabase": true
+    },
+    "CD": {
+      "EnableDeploy": true,
+      "EnableConfigure": true,
+      "ServicePrincipals": {
+        "DeploymentSP": {
+          "Enable": true,
+          "Name": "AdsGoFastDeployer",
+          "ApplyNamePostFix": false
+        },
+        "WebAppAuthenticationSP": {
+          "Enable": true,
+          "Name": "AdsGFWebAuthSP",
+          "ApplyNamePostFix": true,
+          "ClientId": "d733e6a7-01e6-4af6-a6b8-99b029ed7237"
+        },
+        "FunctionAppAuthenticationSP": {
+          "Enable": true,
+          "Name": "AdsGFFuncAppAuthSP",
+          "ApplyNamePostFix": true,
+          "ClientId": "cb3e089a-6d2d-4b3c-949f-353437b78e23"
+        }
+      },
+      "ResourceGroup": {
+        "Id": "/subscriptions/035a1364-f00d-48e2-b582-4fe125905ee3/resourceGroups/AdsTest",
+        "Enable": true,
+        "Subscription": "MS Employee - MSDN - Jorampon",
+        "Domain": "msdemoauxx2.online",
+        "TenantId": "e26ed924-1847-4ea1-b43e-9ba7c65d3538",
+        "Location": "australiaeast",
+        "Name": "purviewtest",
+        "AADUser": "jorampon@microsoft.com",
+        "Hash": "DummyValueToBeReplacedAtRuntime"
+      },
+      "FolderPaths": {
+        "ArmTemplates": "./arm",
+        "Environments": "./../environments",
+        "PublishZip": "./../bin/publish/zipped",
+        "PublishUnZip": "./../bin/publish/unzipped"
+      },
+      "AzureLoginOptions": {
+        "UseInteractiveAzCliLogin": true
+      },
+      "EnviroInstalls": {
+        "PerformLocalInstalls": true,
+        "PerformLocalInstallsAzCli": false,
+        "PerformLocalInstallsAzCliAddToPath": true
+      },
+      "ArmOptions": {
+        "PerformDeployment": false,
+        "PerformDeploymentStorageLogging": false,
+        "PerformDeploymentAppService": false
+      },
+      "Services": {
+        "UseARMDefaults": false,
+        "AppInsights": {
+          "Enable": true,
+          "Name": "adsgfappin",
+          "ApplyNamePostFix": true
+        },
+        "AppPlans": {
+          "WebApp": {
+            "Enable": true,
+            "Name": "adsgfappplanweb",
+            "ApplyNamePostFix": true,
+            "ResourceGroup": null
+          },
+          "FunctionApp": {
+            "Enable": true,
+            "Name": "adsgfappplanfnc",
+            "ApplyNamePostFix": true,
+            "ResourceGroup": null
+          }
+        },
+        "Purview":{
+          "Enable": true,
+          "Name": "purviewtest12",
+          "ApplyNamePostFix": false,
+          "ResourceGroup": "purviewtest",
+          "Location": "australiaeast"
+
+        },
+        "AzureSQLServer": {
+          "Enable": true,
+          "Name": "adsgfazsql",
+          "ApplyNamePostFix": true,
+          "AdminUser": "AdsAdmin",
+          "AdminPassword": "EPuiX2K0^T4t",
+          "AdsGoFastDB": {
+            "Enable": true,
+            "Name": "AdsGf",
+            "UpdateSourceAndTargetSystems": true,
+            "UpdateDataFactory": true,
+            "ApplyNamePostFix": false
+          },
+          "StagingDB": {
+            "Enable": true,
+            "Name": "AdsGfStaging",
+            "ApplyNamePostFix": false
+          },
+          "SampleDB": {
+            "Enable": true,
+            "Name": "AdsGfSample",
+            "ApplyNamePostFix": false
+          }
+        },
+        "CoreFunctionApp": {
+          "Enable": true,
+          "Name": "adsgofastfunc",
+          "ApplyNamePostFix": true,
+          "PrincipalId": ""
+        },
+        "DataFactory": {
+          "Enable": true,
+          "Name": "adsgfadf",
+          "ApplyNamePostFix": true,
+          "AzVnetIr": {
+            "Enable": true,
+            "Name": "SelfHostedIntegrationRuntime-Azure-VNET",
+            "Type": "ManagedVnet"
+          },
+          "OnPremVnetIr": {
+            "Enable": false,
+            "Name": "SelfHostedIntegrationRuntime-OnPem-Net",
+            "Type": "ManagedVnet"
+          }
+        },
+        "WebSite": {
+          "Enable": true,
+          "Name": "adsgofastweb",
+          "ApplyNamePostFix": true,
+          "PrincipalId": ""
+        },
+        "LogAnalytics": {
+          "Enable": true,
+          "Name": "adsgofastloganalytics",
+          "ApplyNamePostFix": true
+        },
+        "KeyVault": {
+          "Enable": true,
+          "Name": "adsgfkv",
+          "ApplyNamePostFix": true
+        },
+        "Vnet": {
+          "Enable": true,
+          "Name": "AdsGoFastVnet"
+        },
+        "Storage": {
+          "Logging": {
+            "Name": "logstg",
+            "ApplyNamePostFix": true,
+            "Enable": true,
+            "Dummy": ""
+          },
+          "ADLS": {
+            "Name": "adls",
+            "ApplyNamePostFix": true,
+            "Enable": true
+          },
+          "Blob": {
+            "Name": "blob",
+            "ApplyNamePostFix": true,
+            "Enable": true,
+            "ResourceId": ""
+          }
+        }
+      }
+    }
+  }
+}
