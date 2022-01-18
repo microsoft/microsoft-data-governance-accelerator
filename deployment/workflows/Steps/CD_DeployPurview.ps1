@@ -2,7 +2,7 @@
 if ($env:AdsOpts_CD_Services_Purview_Enable -eq "True")
 {
     Write-Host "Creating Data Purview"
-    az deployment group create -g $env:AdsOpts_CD_Services_Purview_ResourceGroup --template-file ./../arm/purview.bicep --parameters location=$env:AdsOpts_CD_Services_Purview_Location purviewAccountName=$env:AdsOpts_CD_Services_Purview_Name 
+    az deployment group create -g $env:AdsOpts_CD_Services_Purview_ResourceGroup --template-file ./../bicep/purview.bicep --parameters location=$env:AdsOpts_CD_Services_Purview_Location purviewAccountName=$env:AdsOpts_CD_Services_Purview_Name 
 }
 else 
 {
