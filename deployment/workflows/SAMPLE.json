@@ -1,0 +1,18 @@
+{
+    "entities": [
+        {
+            "typeName": "column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "https://adsdevdlsadsbn6dadsl.dfs.core.windows.net/datalakeraw/Tests/Azure Storage to Azure Storage/{N}/SalesLT.Customer.parquet#__tabular_schema//CompanyName",
+                "name": "CompanyName",
+                "description": null,
+                "type": "UTF8"
+            },          
+            "status": "ACTIVE",            
+            "collectionId": "adsgfpv"
+        }
+    ]
+}

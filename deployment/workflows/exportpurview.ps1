@@ -1,4 +1,4 @@
-$PurviewAccountName = "purviewtest12"
+$PurviewAccountName = "adsgfpv"
 
 #Get Az ManagementToken
 $Aztoken = az account get-access-token --resource=https://management.azure.com --query accessToken --output tsv
@@ -48,7 +48,7 @@ $TypeStats.typeStatistics.PSObject.Properties | foreach {
     $FileName = "Discover_Browse_POST_$EntityType"
 
 
-    Invoke-RestMethod -Uri "https://purviewtest12.catalog.purview.azure.com/api/browse?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $token -ContentType 'application/json' -Method "POST" -Body ($Body | ConvertTo-Json) | ConvertTo-Json -depth 100 | Out-File "..\bin\purview\$FileName.json"
+    Invoke-RestMethod -Uri "https://$PurviewAccountName.catalog.purview.azure.com/api/browse?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $token -ContentType 'application/json' -Method "POST" -Body ($Body | ConvertTo-Json) | ConvertTo-Json -depth 100 | Out-File "..\bin\purview\$FileName.json"
 
     #$_.Value.count
 }
@@ -62,9 +62,9 @@ $Datasources.value | foreach {
     $DS = $_.name    
     
     $FileName = "Scan_ScansByDatasource_$DS"
-    $Uri = "https://purviewtest12.scan.purview.azure.com/datasources/$DS/scans?api-version=2018-12-01-preview"
+    $Uri = "https://$PurviewAccountName.scan.purview.azure.com/datasources/$DS/scans?api-version=2018-12-01-preview"
 
-    Invoke-RestMethod -Uri $Uri -Authentication "Bearer" -Token $token -ContentType 'application/json' -Method "GET" | ConvertTo-Json -depth 100 | Out-File "..\bin\purview\$FileName.json"
+    Invoke-RestMethod -Uri $Uri -Authentication "Bearer" -Token $Ptoken -ContentType 'application/json' -Method "GET" | ConvertTo-Json -depth 100 | Out-File "..\bin\purview\$FileName.json"
 
     #$_.Value.count
 }
@@ -84,9 +84,98 @@ $Body = @"
 
 $Body = $Body | ConvertFrom-JSON
 
-Invoke-RestMethod -Uri "https://purviewtest12.catalog.purview.azure.com/api/search/query?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $token -ContentType 'application/json' -Method "POST" -Body ($Body | ConvertTo-Json) 
+Invoke-RestMethod -Uri "https://$PurviewAccountName.catalog.purview.azure.com/api/search/query?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $Ptoken -ContentType 'application/json' -Method "POST" -Body ($Body | ConvertTo-Json) 
 
 #| ConvertTo-Json -depth 100 | Out-File "..\bin\purview\$FileName.json"
 
 
+Invoke-RestMethod -Uri "https://$PurviewAccountName.catalog.purview.azure.com/api/atlas/v2/entity/guid/37f8a9f7-18b7-4287-b7dd-b9722a2e6e76?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $Ptoken -ContentType 'application/json' -Method "GET" -Body ($Body | ConvertTo-Json) 
 
+
+Invoke-RestMethod -Uri "https://$PurviewAccountName.catalog.purview.azure.com/api/atlas/v2/entity/guid/9a484533-9c23-4e91-85d7-51f6f6f60000?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $Ptoken -ContentType 'application/json' -Method "GET" -Body ($Body | ConvertTo-Json) 
+
+
+Invoke-RestMethod -Uri "https://$PurviewAccountName.catalog.purview.azure.com/api/atlas/v2/entity/guid/9a484533-9c23-4e91-85d7-51f6f6f60005?api-version=2021-05-01-preview" -Authentication "Bearer" -Token $Ptoken -ContentType 'application/json' -Method "GET" -Body ($Body | ConvertTo-Json) 
+
+
+$Body = @"
+{
+    "entities": [
+        {
+            "typeName": "column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "https://adsdevdlsadsbn6dadsl.dfs.core.windows.net/datalakeraw/Tests/Azure Storage to Azure Storage/{N}/SalesLT.Customer.parquet#__tabular_schema//CompanyName",
+                "name": "CompanyName",
+                "description": null,
+                "type": "UTF8"
+            },          
+            "status": "ACTIVE",            
+            "collectionId": "adsgfpv"
+        },
+        {
+            "typeName": "column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "https://adsdevdlsadsbn6dadsl.dfs.core.windows.net/datalakeraw/Tests/Azure Storage to Azure Storage/{N}/SalesLT.Customer.parquet#__tabular_schema//CompanyName1",
+                "name": "CompanyName1",
+                "description": null,
+                "type": "UTF8"
+            },          
+            "status": "ACTIVE",            
+            "collectionId": "adsgfpv"
+        },
+        {
+            "typeName": "column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "https://adsdevdlsadsbn6dadsl.dfs.core.windows.net/datalakeraw/Tests/Azure Storage to Azure Storage/{N}/SalesLT.Customer.parquet#__tabular_schema//CompanyName2",
+                "name": "CompanyName2",
+                "description": null,
+                "type": "UTF8"
+            },          
+            "status": "ACTIVE",            
+            "collectionId": "adsgfpv"
+        },
+        {
+            "typeName": "column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "https://adsdevdlsadsbn6dadsl.dfs.core.windows.net/datalakeraw/Tests/Azure Storage to Azure Storage/{N}/SalesLT.Customer.parquet#__tabular_schema//CompanyName3",
+                "name": "CompanyName3",
+                "description": null,
+                "type": "UTF8"
+            },          
+            "status": "ACTIVE",            
+            "collectionId": "adsgfpv"
+        },
+        {
+            "typeName": "column",
+            "attributes": {
+                "owner": null,
+                "replicatedTo": null,
+                "replicatedFrom": null,
+                "qualifiedName": "https://adsdevdlsadsbn6dadsl.dfs.core.windows.net/datalakeraw/Tests/Azure Storage to Azure Storage/{N}/SalesLT.Customer.parquet#__tabular_schema//CompanyName4",
+                "name": "CompanyName4",
+                "description": null,
+                "type": "UTF8"
+            },          
+            "status": "ACTIVE",            
+            "collectionId": "adsgfpv"
+        }
+    ]
+}
+
+"@
+
+$Body = $Body | ConvertFrom-JSON -Depth 10
+
+Invoke-RestMethod -Uri "https://$PurviewAccountName.catalog.purview.azure.com/api/atlas/v2/entity/bulk?api-version=2021-07-01" -Authentication "Bearer" -Token $Ptoken -ContentType 'application/json' -Method "POST" -Body ($Body | ConvertTo-Json -Depth 10) 
